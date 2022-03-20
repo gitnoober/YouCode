@@ -22,51 +22,99 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Table of Contents
 
-## Installation
+- [About the Project](#about-the-project)
+- [Getting Started](#getting-started)
+- [API Endpoints](#api-endpoints)
+- [License](#license)
 
-```bash
-$ npm install
-```
 
-## Running the app
+# About the Project
+> API built with NestJS with functionalities like creating Problems, User Authentication with Private Routes, Create Submission related to a specific problem.
+> <br>
+> Nest.Js, Express.Js are the frameworks used in this API <br>
+> <br>
 
-```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
+## Getting Started
+  ### Description
 
-```bash
-# unit tests
-$ npm run test
+  [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+  <br>
+  
 
-# e2e tests
-$ npm run test:e2e
+  ### Installation
 
-# test coverage
-$ npm run test:cov
-```
+  ```bash
+  $ npm install
+  ```
 
-## Support
+  ### Running the app
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+  ```bash
+  # clone the project
+  $ git clone https://github.com/gitnoober/YouCode.git
 
-## Stay in touch
+  # Setting Up Database
+  # create A Postgres Schema with the credentials in ormconfig.ts or change it according to your preference.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+  # create the tables
+  $ npm run db:migrate 
+
+  # create sample data
+  $ npm run db:seed
+
+  # development
+  $ npm run start
+
+  # watch mode
+  $ npm run start:dev
+
+  # production mode
+  $ npm run start:prod
+  ```
+
+  ### Test
+
+  ```bash
+  # unit tests
+  $ npm run test
+
+  # e2e tests
+  $ npm run test:e2e
+
+  # test coverage
+  $ npm run test:cov
+  ```
+
+  ### Support
+
+  Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## API Endpoints
+  ### Public Postman JSON Link
+  ```
+    https://www.getpostman.com/collections/87290a3f4a0718578fe3
+  ```
+  
+  ### Summary
+  ```
+  - http://localhost:3000/users - Create User
+  - http://localhost:3000/users/login - Login Through Email
+  - http://localhost:3000/user - Get Current User
+  - http://localhost:3000/user - Update User Details
+  - http://localhost:3000/articles - Create Problem Article
+  - http://localhost:3000/submissions?articleId={{articleId}} - Create Problem Submissions
+  - http://localhost:3000/articles/{{slug}} - Get Article By Slug
+  - http://localhost:3000/articles/{{slug}} - Delete Article By Slug
+  - http://localhost:3000/articles/{{slug}} - Update Article By Slug
+  - http://localhost:3000/articles - Get Problem Articles (optional query params - limit, offset, author, tags)
+  ```
+
 
 ## License
 
